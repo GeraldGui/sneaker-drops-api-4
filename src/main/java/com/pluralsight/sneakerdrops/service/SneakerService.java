@@ -24,7 +24,7 @@ public class SneakerService {
     }
 
     public Sneaker byId(long id) {
-        return sneakerRepository.findById(id).orElseThrow(null);
+        return sneakerRepository.findById(id).orElse(null);
     }
 
     public List<Sneaker> search(Integer year, String model, Double minPrice ,Double maxPrice, String brand, String sort){
